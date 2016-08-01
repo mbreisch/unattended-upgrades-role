@@ -1,0 +1,7 @@
+---
+# tasks file for unattended-upgrades-role
+- name: Install required package
+  apt: name=unattended-upgrades update_cache=yes state=latest
+
+- name: Configure unattended-upgrades
+  copy: src=apt_periodic dest=/etc/apt/apt.conf.d/10periodic
