@@ -10,7 +10,7 @@
     - role: provision_docker
       provision_docker_inventory: "{{ inventory }}"
 
-- name: Run docker and docker-compose tests
+- name: Run unattended upgrades tests
   hosts: docker_containers
   roles:
     - role: unattended-upgrades-role
